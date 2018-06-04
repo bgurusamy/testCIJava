@@ -7,21 +7,28 @@ pipeline {
      // Check out the test cases from github
      stage('test cases check out')
      {
+         steps{
          echo 'checking out source code'
              git 'https://github.comcast.com/StreamingServices/VDE-Fitnesse'
+         }
      }
       //build the test cases using ant and generate a jar
       stage('build testcases')
-     {
+     {  steps
+      {
          echo 'building the source code using ant'
              git 'https://github.comcast.com/StreamingServices/VDE-Fitnesse'
-     }
+      }
+      }
          
      // Transfer and execute the jar file
       
       stage('transfer and run')
          {
+        steps
+             {
              echo 'transfer and execute the jar file'
+             }
          }
          
        //Send the updates
