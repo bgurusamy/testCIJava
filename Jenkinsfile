@@ -1,17 +1,35 @@
 pipeline {
     agent any {
+        
      stages {
-     
+     // Check out the test cases from github
      stage('test cases check out')
      {
          echo 'checking out source code'
              git 'https://github.comcast.com/StreamingServices/VDE-Fitnesse'
      }
-      stage('build')
+      //build the test cases using ant and generate a jar
+      stage('build testcases')
      {
          echo 'building the source code using ant'
              git 'https://github.comcast.com/StreamingServices/VDE-Fitnesse'
      }
+         
+     // Transfer and execute the jar file
+      
+      Stage('transfer and run')
+         {
+         }
+         
+       //Send the updates
+         post
+         {
+             success{
+             }
+             failure
+             {
+             }
+         }
      
      }
      
