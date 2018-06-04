@@ -9,7 +9,7 @@ pipeline {
      {
          steps{
          echo 'checking out source code'
-           git credentialsId: '7af807f3-2f56-40a0-85a5-25a3dc909758', url:'https://github.comcast.com/StreamingServices/VDE-Fitnesse.git'
+           git credentialsId: '7af807f3-2f56-40a0-85a5-25a3dc909758', url:'git@github.comcast.com:StreamingServices/VDE-Fitnesse.git'
 
          }
      }
