@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 pipeline {
-    agent any {
+    agent any 
         
      stages {
      // Check out the test cases from github
@@ -39,4 +39,4 @@ pipeline {
      }
      
     }
-    }
+    
