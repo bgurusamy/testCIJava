@@ -7,9 +7,12 @@ pipeline {
      // Check out the test cases from github
      stage('test cases check out')
      {
-         steps{
-         echo 'checking out source code'
-          git credentialsId: '8fa4ce4a-7441-4cd3-85de-e137313adf1b', url: 'https://github.comcast.com/NextVM/freeswitch.git'
+          steps{
+         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CloneOption', depth: 0, noTags: false, reference: '', shallow: false, timeout: 25]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '8fa4ce4a-7441-4cd3-85de-e137313adf1b', url: 'https://github.comcast.com/StreamingServices/VDE-Fitnesse.git']]])
+
+        
+      echo 'checking out source code'
+          //git credentialsId: '8fa4ce4a-7441-4cd3-85de-e137313adf1b', url: 'https://github.comcast.com/NextVM/freeswitch.git'
 
 
          }
