@@ -30,7 +30,7 @@ pipeline {
              }
              failure
              {
-                 echo 'failure block
+                 echo 'failure block'
              }
          }
      
