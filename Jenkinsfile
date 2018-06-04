@@ -9,7 +9,10 @@ pipeline {
      {
          steps{
          echo 'checking out source code'
-             git 'https://github.comcast.com/StreamingServices/VDE-Fitnesse'
+             git (url:'https://github.comcast.com/StreamingServices/VDE-Fitnesse',
+                  branch:'master',
+                  credentialsId:'a7cb5dec-9051-40cb-942b-d8423f3be9bb'
+             )
          }
      }
       //build the test cases using ant and generate a jar
