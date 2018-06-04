@@ -2,9 +2,15 @@ pipeline {
     agent any {
      stages {
      
-     stage('source code')
+     stage('test cases check out')
      {
-     git 'https://github.comcast.com/StreamingServices/VDE-Fitnesse'
+         echo 'checking out source code'
+             git 'https://github.comcast.com/StreamingServices/VDE-Fitnesse'
+     }
+      stage('build')
+     {
+         echo 'building the source code using ant'
+             git 'https://github.comcast.com/StreamingServices/VDE-Fitnesse'
      }
      
      }
