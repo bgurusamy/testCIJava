@@ -30,6 +30,7 @@ pipeline {
              echo 'transfer and execute the jar file'
              }
          }
+     }
          
        //Send the updates
          post
@@ -43,7 +44,7 @@ pipeline {
              }
          }
      
-     }
+     
      
     }
     
