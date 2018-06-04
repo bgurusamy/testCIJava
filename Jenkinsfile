@@ -17,17 +17,20 @@ pipeline {
          
      // Transfer and execute the jar file
       
-      Stage('transfer and run')
+      stage('transfer and run')
          {
+             echo 'transfer and execute the jar file'
          }
          
        //Send the updates
          post
          {
              success{
+                 echo 'success block'
              }
              failure
              {
+                 echo 'failure block
              }
          }
      
