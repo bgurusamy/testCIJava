@@ -17,6 +17,11 @@ pipeline {
 
          }
      }
+         // build jar
+         //start fitness
+        // execute fitness
+         //auto email 
+         
       //build the test cases using ant and generate a jar
       stage('build testcases')
      {  steps
